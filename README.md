@@ -2,6 +2,8 @@
 
 A reusable Vite plugin for Tailwind CSS 4 theming with dynamic color configuration. Inspired by Nuxt UI's theming system and made framework-agnostic.
 
+**[Live Demo](https://flycro.github.io/tailwind-color-theme-plugin/)** - See the plugin in action with interactive theme switching!
+
 ## Features
 
 - Dynamic color theming with CSS variables
@@ -257,10 +259,6 @@ export default defineConfig({
 - Vite 6.0+ or 7.0+
 - Tailwind CSS 4.0+
 - Node.js 18+
-
-## Demo
-
-**[Live Demo](https://flycro.github.io/tailwind-color-theme-plugin/)** - See the plugin in action with interactive theme switching!
 
 ## Repository
 
