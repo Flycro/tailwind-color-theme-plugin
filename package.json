@@ -1,0 +1,55 @@
+{
+  "name": "tailwind-color-theme-plugin",
+  "version": "1.0.0",
+  "description": "A reusable Vite plugin for Tailwind 4 theming with dynamic color configuration",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "defu": "^6.1.4",
+    "pathe": "^1.1.2",
+    "tailwindcss": "^4.0.0",
+    "unplugin": "^1.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^7.0.0"
+  },
+  "peerDependencies": {
+    "vite": "^6.0.0 || ^7.0.0"
+  },
+  "keywords": [
+    "tailwindcss",
+    "vite",
+    "plugin",
+    "theming",
+    "css",
+    "colors",
+    "dark-mode",
+    "vue",
+    "react",
+    "svelte"
+  ],
+  "author": "Flycro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

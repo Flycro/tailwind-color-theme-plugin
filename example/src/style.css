@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "tailwind-color-theme-plugin/theme.css";
+
+@theme static {
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+
+  --color-brand-50: #00FFFF;
+  --color-brand-100: #00FFFF;
+  --color-brand-200: #00FFFF;
+  --color-brand-300: #00FFFF;
+  --color-brand-400: #00FFFF;
+  --color-brand-500: #00FFFF;
+  --color-brand-600: #00FFFF;
+  --color-brand-700: #00FFFF;
+  --color-brand-800: #00FFFF;
+  --color-brand-900: #00FFFF;
+  --color-brand-950: #00FFFF;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--ui-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif);
+}
