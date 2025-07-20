@@ -308,6 +308,48 @@ ${uiVarsDark}
   return result
 }
 
+function generateIntelliSenseCSS(themeColors: Record<string, string>, prefix: string = 'ui', includeSemantics: boolean = true) {
+  const colorEntries = Object.keys(themeColors).map(key => {
+    const shadeEntries = shades.map(shade => 
+      `  --color-${key}-${shade}: var(--${prefix}-color-${key}-${shade});`
+    ).join('\n')
+    
+    return `  --color-${key}: var(--${prefix}-${key});\n  --color-${key}-DEFAULT: var(--${prefix}-${key});\n${shadeEntries}`
+  }).join('\n\n')
+
+  const semanticEntries = includeSemantics ? `
+  /* Semantic text colors */
+  --text-color-default: var(--${prefix}-text);
+  --text-color-muted: var(--${prefix}-text-muted);
+  --text-color-toned: var(--${prefix}-text-toned);
+  --text-color-dimmed: var(--${prefix}-text-dimmed);
+  --text-color-highlighted: var(--${prefix}-text-highlighted);
+  --text-color-inverted: var(--${prefix}-text-inverted);
+
+  /* Semantic background colors */
+  --background-color-default: var(--${prefix}-bg);
+  --background-color-muted: var(--${prefix}-bg-muted);
+  --background-color-elevated: var(--${prefix}-bg-elevated);
+  --background-color-accented: var(--${prefix}-bg-accented);
+  --background-color-inverted: var(--${prefix}-bg-inverted);
+
+  /* Semantic border colors */
+  --border-color-default: var(--${prefix}-border);
+  --border-color-muted: var(--${prefix}-border-muted);
+  --border-color-accented: var(--${prefix}-border-accented);
+  --border-color-inverted: var(--${prefix}-border-inverted);` : ''
+
+  return `/*
+ * IntelliSense helper for Tailwind Color Theme Plugin
+ * This file helps VS Code provide autocomplete for theme utilities
+ * Generated automatically - do not edit manually
+ */
+
+@theme default {
+${colorEntries}${semanticEntries}
+}`
+}
+
 export const TailwindThemePlugin = createUnplugin<TailwindThemeOptions | undefined>((options = {}) => {
   const config = defu(options, {
     colors: defaultColors,
@@ -325,6 +367,20 @@ export const TailwindThemePlugin = createUnplugin<TailwindThemeOptions | undefin
     plugins.push({
       name: 'tailwind-theme:utilities',
       enforce: 'pre',
+      async buildStart() {
+        try {
+          const fs = await import('fs')
+          const path = await import('path')
+
+          const themeCSS = generateTailwindThemeCSS(config.colors!, config.prefix, config.includeSemanticColors, config.adaptiveShades)
+          const outputPath = path.resolve('node_modules/tailwind-color-theme-plugin/theme.css')
+
+          fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+          fs.writeFileSync(outputPath, themeCSS)
+        } catch (err) {
+          console.warn('Failed to write theme.css for IntelliSense:', err)
+        }
+      },
       vite: {
         configResolved(resolvedConfig) {
           
