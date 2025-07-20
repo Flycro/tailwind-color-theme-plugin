@@ -258,6 +258,10 @@ export default defineConfig({
 - Tailwind CSS 4.0+
 - Node.js 18+
 
+## Demo
+
+**[Live Demo](https://flycro.github.io/tailwind-color-theme-plugin/)** - See the plugin in action with interactive theme switching!
+
 ## Repository
 
 - **GitHub**: [https://github.com/Flycro/tailwind-color-theme-plugin](https://github.com/Flycro/tailwind-color-theme-plugin)

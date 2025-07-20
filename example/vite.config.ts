@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import tailwindTheme from 'tailwind-color-theme-plugin'
 
 export default defineConfig({
+  base: '/tailwind-color-theme-plugin/',
   plugins: [
     tailwindTheme({
       colors: {
