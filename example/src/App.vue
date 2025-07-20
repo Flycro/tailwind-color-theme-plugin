@@ -283,13 +283,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import ThemePicker from './components/ThemePicker.vue'
 
 const colors = ['primary', 'secondary', 'success', 'warning', 'error']
 const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
-
-onMounted(() => {
-
-})
 </script>
