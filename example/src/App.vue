@@ -4,7 +4,7 @@
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-8">
           <h1 class="text-4xl font-bold text-default mb-4 transition-colors duration-300">
-            <span class="text-primary">Tailwind</span> Theme Plugin Demo
+            <span class="text-primary">Tailwind Color</span> Theme Plugin Demo
           </h1>
           <p class="text-muted mb-6 transition-colors duration-300">
             A reusable Vite plugin for Tailwind 4 theming with dynamic color configuration inspired by Nuxt UI
