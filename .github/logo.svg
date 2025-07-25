@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb2c36;
+      }
+
+      .cls-2 {
+        fill: #00a6f4;
+      }
+
+      .cls-3 {
+        fill: #00c950;
+      }
+
+      .cls-4 {
+        fill: #fe9a00;
+      }
+
+      .cls-5 {
+        fill: #ad46ff;
+      }
+
+      .cls-6 {
+        fill: #f6339a;
+      }
+
+      .cls-7 {
+        fill: #00bba7;
+      }
+
+      .cls-8 {
+        fill: #00b8db;
+      }
+
+      .cls-9 {
+        fill: #615fff;
+      }
+    </style>
+  </defs>
+  <g id="Ebene_1-2" data-name="Ebene 1">
+    <g>
+      <path class="cls-2" d="M5,0h20v25H0V5C0,2.24,2.24,0,5,0Z"/>
+      <rect class="cls-3" x="30" width="25" height="25"/>
+      <rect class="cls-8" x="30" y="30" width="25" height="25"/>
+      <path class="cls-4" d="M61.27,0h18.73c2.76,0,5,2.24,5,5v18.73c0,.7-.57,1.27-1.27,1.27h-22.47c-.7,0-1.27-.57-1.27-1.27V1.27c0-.7.57-1.27,1.27-1.27Z"/>
+      <rect class="cls-1" x="60" y="30" width="25" height="25"/>
+      <path class="cls-9" d="M60.84,60h23.32c.46,0,.84.38.84.84v19.16c0,2.76-2.24,5-5,5h-19.16c-.46,0-.84-.38-.84-.84v-23.32c0-.46.38-.84.84-.84Z"/>
+      <rect class="cls-6" x="30" y="60" width="25" height="25"/>
+      <path class="cls-7" d="M.25,60h24.5c.14,0,.25.11.25.25v24.5c0,.14-.11.25-.25.25H5c-2.76,0-5-2.24-5-5v-19.75c0-.14.11-.25.25-.25Z"/>
+      <rect class="cls-5" y="30" width="25" height="25"/>
+    </g>
+  </g>
+</svg>
