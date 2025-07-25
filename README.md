@@ -1,4 +1,12 @@
-# Tailwind Color Theme Plugin
+<p align="center">
+<img src="./.github/logo.svg" width="150">
+</p>
+<h1 align="center">Tailwind Color Theme Plugin</h1>
+
+<p align="center">
+<a href="https://npmjs.com/package/tailwind-color-theme-plugin"><img src="https://img.shields.io/npm/v/tailwind-color-theme-plugin?style=flat&colorA=104e64&colorB=00b8db" alt="npm version"></a>
+<a href="https://npmjs.com/package/tailwind-color-theme-plugin"><img src="https://img.shields.io/npm/dm/tailwind-color-theme-plugin?style=flat&colorA=104e64&colorB=00b8db" alt="npm downloads"></a>
+</p>
 
 A reusable Vite plugin for Tailwind CSS 4 theming with dynamic color configuration. Inspired by Nuxt UI's theming system and made framework-agnostic.
 
@@ -66,15 +74,15 @@ Override colors using Tailwind 4's @theme syntax:
 ## Configuration Options
 
 ```typescript
-interface TailwindThemeOptions {
-  colors?: {
-    primary?: string
-    secondary?: string
-    success?: string
-    info?: string
-    warning?: string
-    error?: string
-    neutral?: 'slate' | 'gray' | 'zinc' | 'neutral' | 'stone'
+export interface TailwindThemeOptions {
+  colors?: Record<string, Color> & { 
+    primary?: Color
+    secondary?: Color
+    success?: Color
+    info?: Color
+    warning?: Color
+    error?: Color
+    neutral?: Color 
   }
   customVariables?: Record<string, string>
   injectColors?: boolean
@@ -260,10 +268,9 @@ export default defineConfig({
 - Tailwind CSS 4.0+
 - Node.js 18+
 
-## Repository
+## Special Thanks to
 
-- **GitHub**: [https://github.com/Flycro/tailwind-color-theme-plugin](https://github.com/Flycro/tailwind-color-theme-plugin)
-- **NPM**: [https://www.npmjs.com/package/tailwind-color-theme-plugin](https://www.npmjs.com/package/tailwind-color-theme-plugin)
+- [**Nuxt UI**](https://ui.nuxt.com/): For the Main Inspiration for this plugin and their incredible Theming System 
 
 ## License
 
