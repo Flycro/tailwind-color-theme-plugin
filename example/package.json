@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.17"
+    "vue": "^3.5.27"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.0",
+    "@vitejs/plugin-vue": "^6.0.4",
     "tailwind-color-theme-plugin": "file:..",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.5"
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
   }
 }
